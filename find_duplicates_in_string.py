@@ -1,6 +1,6 @@
 """
 Find duplicates in string.
-Means two same characters next to each other in the string. Three or more are not expected to occur. 
+Means two same characters next to each other in the string. Three or more are not expected to occur.
 Just for fun, try not to use built-in string methods of Python, if possible.
 """
 

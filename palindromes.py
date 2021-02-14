@@ -28,7 +28,7 @@ def check_if_palindrome(string_):
 
 if __name__ == "__main__":
     print("these strings should be valid: ", palindromes)
-    [print((item, check_if_palindrome(item))) for item in palindromes]
+    _ = [print((item, check_if_palindrome(item))) for item in palindromes]
 
     print("these strings should be invalid: ", common)
-    [print((item, check_if_palindrome(item))) for item in common]
+    _ = [print((item, check_if_palindrome(item))) for item in common]
