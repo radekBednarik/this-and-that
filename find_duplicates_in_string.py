@@ -4,12 +4,20 @@ Means two same characters next to each other in the string. Three or more are no
 Just for fun, try not to use built-in string methods of Python, if possible.
 """
 
-original_string = (
+ORIGINAL_STRING = (
     "hello, how are youu. Seems, there will bee a plenty of duplicates to ffind dd"
 )
 
 
 def find_duplicates(string_):
+    """Finds duplicates of `char` in the given string.
+
+    Args:
+        string_ (str): string to scan for duplicated `char`
+
+    Returns:
+        list[str]: list of duplicated `char`s
+    """
     duplicates = []
     visited_indexes = []
     string_lenght = len(string_)
@@ -26,5 +34,5 @@ def find_duplicates(string_):
 
 
 if __name__ == "__main__":
-    print("original string: ", original_string)
-    print("list of duplicates: ", find_duplicates(original_string))
+    print("original string: ", ORIGINAL_STRING)
+    print("list of duplicates: ", find_duplicates(ORIGINAL_STRING))
