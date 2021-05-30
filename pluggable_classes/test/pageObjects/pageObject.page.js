@@ -2,7 +2,7 @@
 
 const { Main } = require("./page");
 
-class PageObjectOne extends Main {
+class PageObject extends Main {
   constructor(context, page, ...args) {
     super(context, page, ...args);
     this.prop = "this is class one";
@@ -13,4 +13,4 @@ class PageObjectOne extends Main {
   }
 }
 
-module.exports = { PageObjectOne };
+module.exports = { PageObject };

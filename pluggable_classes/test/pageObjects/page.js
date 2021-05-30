@@ -13,6 +13,14 @@ class Main {
       this[key] = new value(context, page);
     }
   }
+
+  async goto(url) {
+    await this.page.goto(url);
+  }
+
+  async pageTitle() {
+    return await this.page.title();
+  }
 }
 
 module.exports = { Main };
