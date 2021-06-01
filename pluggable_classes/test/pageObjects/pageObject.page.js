@@ -3,8 +3,8 @@
 const { Main } = require("./page");
 
 class PageObject extends Main {
-  constructor(context, page, ...args) {
-    super(context, page, ...args);
+  constructor(page, ...args) {
+    super(page, ...args);
     this.prop = "this is class one";
   }
 

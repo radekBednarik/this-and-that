@@ -1,16 +1,18 @@
 "use strict";
 
 class Main {
-  constructor(context, page, ...args) {
-    this.context = context;
+  constructor(page, ...args) {
     this.page = page;
-    this.plugIn(this.context, this.page, args);
+    this.context = this.page.context();
+    this._plugIn(this.page, args);
   }
 
-  plugIn(context, page, args) {
-    for (const arg of args) {
-      const [key, value] = Object.entries(arg)[0];
-      this[key] = new value(context, page);
+  _plugIn(page, args) {
+    if (args.length > 0) {
+      for (const arg of args) {
+        const [key, value] = Object.entries(arg)[0];
+        this[key] = new value(page);
+      }
     }
   }
 

@@ -20,13 +20,12 @@ describe("We can plug classes dynamically", function () {
     page = await context.newPage();
 
     pageObject = new PageObject(
-      context,
       page,
       { componentOne: PageComponentOne },
       { componentTwo: PageComponentTwo }
     );
 
-    await pageObject.goto("https://www.tesena.com/en")
+    await pageObject.goto("https://www.tesena.com/en");
   });
 
   after(async function () {
